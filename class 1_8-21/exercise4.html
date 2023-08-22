@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button:hover {
+            font-size: 26px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <label for="name">Enter your name</label>
+        <input type="text" name="name" id="name">
+    
+        <br>
+        <br>
+        <label for="radio">Favorite Pokemon</label>
+        <input type="radio" name="radio" value="squirtle" /> Squirtle
+        <input type="radio" name="radio" value="charmander" /> Charmander
+        <input type="radio" name="radio" value="bulbasaur" /> Bulbasaur
+
+        <br>
+        <br>
+
+        <label for="country">Country</label>
+        <select name="country" value="">
+            <option value=""></option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="ack">Did you really read the terms and conditions?</label>
+        <input type="checkbox" name="ack" />
+
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
