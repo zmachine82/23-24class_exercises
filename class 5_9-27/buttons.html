@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        body {
+            height: 98vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            height: 400px;
+            width: 400px;
+            margin: 16px;
+            color: white;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #random {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+
+        <button id="red">Red<br><span>0</span></button>
+        <button id="blue">Blue<br><span>0</span></button>
+        <button id="green">Green<br><span>0</span></button>
+        <button id="random">Random<br><span>0</span></button>
+    </div>
+
+
+
+    <script>
+        // get reference to html elements we care about
+        const redButton = document.getElementById('red')
+        const blueButton = document.getElementById('blue')
+        const greenButton = document.getElementById('green')
+        const randomButton = document.getElementById('random')
+
+        let redCount = 0
+        let blueCount = 0
+        let greenCount = 0
+        let randomCount = 0
+
+        // create event listeners
+        redButton.addEventListener('click', () => {
+            changeBodyColor('red')
+            redCount++
+            redButton.querySelector('span').innerText = redCount
+        })
+
+        blueButton.addEventListener('click', () => {
+            changeBodyColor('blue')
+            blueCount++
+            blueButton.querySelector('span').innerText = blueCount
+        })
+
+        greenButton.addEventListener('click', () => {
+            changeBodyColor('green')
+            greenCount++
+            greenButton.querySelector('span').innerText = greenCount
+        })
+
+        randomButton.addEventListener('click', () => {
+            changeBodyColor(randomColor())
+            randomCount++
+            randomButton.querySelector('span').innerText = randomCount
+        })
+
+
+        // declare functions that do the things
+        function changeBodyColor(color) {
+            document.body.style.backgroundColor = color
+        }
+
+        function randomColor() {
+            return ['red', 'blue', 'green'][Math.floor(Math.random() * 3)]
+        }
+
+    </script>
+</body>
+
+</html>
