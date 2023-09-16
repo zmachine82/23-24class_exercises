@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    margin: 8px 0;
+}
+
+#sidebar {
+    background-color: rgb(94, 94, 231);
+    width: 33%;
+    height: 100%;
+    
+}
+
+#app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.list-item {
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+
+}
+
+.title-area {
+    height: 4%;
+}
+
+.list-item:hover {
+    background-color: rgb(193, 193, 242);
+}
+
+.list-item h4 {
+    margin: 0;
+}
+
+.list-item-container {
+    height: 88%;
+}
+
+.add-todo-section input {
+    margin-left: 8px;
+height: 32px;
+width: calc(100% - 64px);
+}
+
+.add-todo-section button {
+    height: 38px;
+    width: 38px;
+    }
+
+#newTodoInput {
+    height: 32px;
+    margin-left: 8px;
+}
+
+#newSubmitButton {
+    height: 38px;
+    margin-left: 8px;
+}
