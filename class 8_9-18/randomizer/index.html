@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <style>
+        #randomize {
+            margin-top: 100px;
+        }
+
+        .lock {
+            margin-top: 16px;
+        }
+    </style>
+    <script type="module" src="category.js"></script>
+</head>
+
+<body>
+    <div class="categories">
+
+        <div>
+            <h3 class="category">Race</h3>
+            <p class="category-display"></p>
+            <button class="lock">Lock</button>
+        </div>
+    </div>
+
+    <button id="randomize">Randomize</button>
+
+    <script type="module">
+        import { Category } from "./category.js";
+        const races = new Category('Race', ['orc', 'human', 'elf'])
+
+        const categoriesContainer = document.querySelector('.categories')
+
+        const randomizeButton = document.getElementById('randomize')
+        const lockButton = document.querySelector('.lock')
+        let locked = false;
+        
+        randomizeButton.addEventListener('click', () => {
+            races.randomize()
+
+            categoriesContainer.innerHTML = races.render()
+        })
+
+       
+
+
+        
+
+    </script>
+</body>
+
+</html>
