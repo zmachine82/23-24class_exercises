@@ -13,6 +13,3 @@ let owen: Wow = {
 console.log(owen)
 
 
-export function name(params:type) {
-    
-}
